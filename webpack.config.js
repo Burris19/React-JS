@@ -1,8 +1,8 @@
 module.exports = {
   context: __dirname,
-  entry: "./app/dist/index.jsx",
+  entry: "./app/src/index.js",
   output: {
-    path: __dirname + "/app/js",
+    path: __dirname + "/app/dist/js",
     filename: "index.min.js"
   },  
   module: {
@@ -13,7 +13,7 @@ module.exports = {
         loader: "babel-loader",
         query:{
           presets: ['react', 'es2015'],
-          // plugins: ['react-html-attrs', 'transform-class-properties', 'transform-decorators-legacy']
+          plugins: ['react-html-attrs', 'transform-class-properties', 'transform-decorators-legacy']
         }
       }
     ]
